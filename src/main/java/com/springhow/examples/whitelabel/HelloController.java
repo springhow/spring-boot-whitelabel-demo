@@ -1,0 +1,14 @@
+package com.springhow.examples.whitelabel;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+
+public class HelloController {
+
+    @RequestMapping("/hello")
+    String hello() {
+        throw new IntrovertException("Don't bother me please..!");
+    }
+}
